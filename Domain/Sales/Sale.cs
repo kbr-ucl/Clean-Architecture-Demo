@@ -55,5 +55,27 @@ namespace CleanArchitecture.Domain.Sales
         {
             _totalPrice = _unitPrice * _quantity;
         }
+
+        public void Validate()
+        {
+            if (Date == default) throw new SaleInvalidDateException(Date);
+            // Fluid validation
+        }
+    }
+
+    public class SaleInvalidDateException : Exception
+    {
+        public SaleInvalidDateException(DateTime date) : base(message: $"uLOVLIG DATA: {date}")
+        {
+      
+        }
+    }
+
+    public static class SalesCommmands
+    {
+        public class NewSales
+        {
+
+        }
     }
 }
