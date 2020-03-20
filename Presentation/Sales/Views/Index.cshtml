@@ -16,23 +16,25 @@
             <th>Product</th>
             <th>Unit Price</th>
             <th>Quantity</th>
+            <th>Wanted delivery date</th>
             <th>Total Price</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var sale in Model)
         {
-            <tr>
-                <td><a href="sales/@sale.Id">@sale.Id</a></td>
-                <td>@sale.Date.ToString("d")</td>
-                
-                <td>@sale.CustomerName</td>
-                <td>@sale.EmployeeName</td>
-                <td>@sale.ProductName</td>
-                <td>$@sale.UnitPrice</td>
-                <td>@sale.Quantity</td>
-                <td>$@sale.TotalPrice</td>
-            </tr>
+        <tr>
+            <td><a href="sales/@sale.Id">@sale.Id</a></td>
+            <td>@sale.Date.ToString("d")</td>
+
+            <td>@sale.CustomerName</td>
+            <td>@sale.EmployeeName</td>
+            <td>@sale.ProductName</td>
+            <td>$@sale.UnitPrice</td>
+            <td>@sale.Quantity</td>
+            <td>@sale.Delivery.ToShortDateString()</td>
+            <td>$@sale.TotalPrice</td>
+        </tr>
         }
     </tbody>
 </table>

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace CleanArchitecture.Application.Sales.Commands.CreateSale
 {
@@ -12,6 +10,10 @@ namespace CleanArchitecture.Application.Sales.Commands.CreateSale
 
         public int ProductId { get; set; }
 
-        public int Quantity { get; set; }        
+        public int Quantity { get; set; }
+
+        //indsather
+        public DateTime Delivery { get; set; }
+        //--------------------------------------
     }
 }

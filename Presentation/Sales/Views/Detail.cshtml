@@ -36,6 +36,10 @@
         <td>@Model.Quantity</td>
     </tr>
     <tr>
+        <th>Wanted delivery date</th>
+        <td>@Model.Delivery.ToShortDateString()</td>
+    </tr>
+    <tr>
         <th>Total Price</th>
         <td>$@Model.TotalPrice</td>
     </tr>
