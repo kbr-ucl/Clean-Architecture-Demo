@@ -73,6 +73,8 @@ namespace CleanArchitecture.Specification.Sales.CreateASale
             Assert.That(sale.Date, 
                 Is.EqualTo(saleRecord.Date));
 
+            Assert.That(sale.Delevery, Is.EqualTo(saleRecord.Delivery));
+
             Assert.That(sale.Customer.Id,
                 Is.EqualTo(customerId));
 

@@ -23,6 +23,11 @@ namespace CleanArchitecture.Application.Sales.Queries.GetSaleDetail
                 {
                     Id = p.Id, 
                     Date = p.Date,
+
+                    //indsatHer
+                    Delivery = p.Delevery,
+                    //--------------------------------------------
+
                     CustomerName = p.Customer.Name,
                     EmployeeName = p.Employee.Name,
                     ProductName = p.Product.Name,

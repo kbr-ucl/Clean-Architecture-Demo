@@ -69,6 +69,9 @@ namespace CleanArchitecture.Persistence
             database.Sales.Add(new Sale()
             {
                 Date = DateTime.Now.Date.AddDays(-3),
+                //INdsather
+                Delevery = DateTime.Now.AddDays(-3),
+                //----------------------
                 Customer = customers[0],
                 Employee = employees[0],
                 Product = products[0],
@@ -79,6 +82,9 @@ namespace CleanArchitecture.Persistence
             database.Sales.Add(new Sale()
             {
                 Date = DateTime.Now.Date.AddDays(-2),
+                //INdsather
+                Delevery = DateTime.Now.AddDays(-2),
+                //----------------------
                 Customer = customers[1],
                 Employee = employees[1],
                 Product = products[1],
@@ -89,6 +95,9 @@ namespace CleanArchitecture.Persistence
             database.Sales.Add(new Sale()
             {
                 Date = DateTime.Now.Date.AddDays(-1),
+                //INdsather
+                Delevery = DateTime.Now.AddDays(-1),
+                //----------------------
                 Customer = customers[2],
                 Employee = employees[2],
                 Product = products[2],

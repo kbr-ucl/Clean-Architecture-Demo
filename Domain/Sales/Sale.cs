@@ -17,6 +17,9 @@ namespace CleanArchitecture.Domain.Sales
 
         public DateTime Date { get; set; }
 
+        public DateTime Delevery { get; set; }
+
+
         public Customer Customer { get; set; }
 
         public Employee Employee { get; set; }

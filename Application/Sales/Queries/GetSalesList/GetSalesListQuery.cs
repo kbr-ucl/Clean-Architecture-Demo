@@ -22,6 +22,9 @@ namespace CleanArchitecture.Application.Sales.Queries.GetSalesList
                 {
                     Id = p.Id, 
                     Date = p.Date,
+                    //insather
+                    Delivery = p.Delevery,
+                    //----------------------
                     CustomerName = p.Customer.Name,
                     EmployeeName = p.Employee.Name,
                     ProductName = p.Product.Name,

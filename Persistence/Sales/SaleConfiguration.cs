@@ -16,6 +16,11 @@ namespace CleanArchitecture.Persistence.Sales
             Property(p => p.Date)
                 .IsRequired();
 
+            //INdsather
+            Property(p => p.Delevery)
+                .IsRequired();
+            //-----------------------
+
             HasRequired(p => p.Customer);
 
             HasRequired(p => p.Employee);

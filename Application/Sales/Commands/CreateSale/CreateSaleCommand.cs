@@ -30,6 +30,8 @@ namespace CleanArchitecture.Application.Sales.Commands.CreateSale
         {
             var date = _dateService.GetDate();
 
+            var delivery = _dateService.GetDate();
+
             var customer = _database.Customers
                 .Single(p => p.Id == model.CustomerId);
 
@@ -43,6 +45,7 @@ namespace CleanArchitecture.Application.Sales.Commands.CreateSale
 
             var sale = _factory.Create(
                 date,
+                delivery,
                 customer, 
                 employee, 
                 product, 

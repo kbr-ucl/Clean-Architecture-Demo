@@ -26,6 +26,10 @@ namespace CleanArchitecture.Application.Sales.Commands.CreateSale
         private Sale _sale;
 
         private static readonly DateTime Date = new DateTime(2001, 2, 3);
+
+        //indsather
+        private static readonly DateTime Delivery = new DateTime(2001, 2, 3);
+        //-------------------------------------------
         private const int CustomerId = 1;
         private const int EmployeeId = 2;
         private const int ProductId = 3;
@@ -67,6 +71,12 @@ namespace CleanArchitecture.Application.Sales.Commands.CreateSale
                 .Setup(p => p.GetDate())
                 .Returns(Date);
 
+            //IndsatHer
+            _mocker.GetMock<IDateService>()
+                .Setup(p => p.GetDate())
+                .Returns(Delivery);
+            //-----------------------------------
+
             SetUpDbSet(p => p.Customers, customer);
             SetUpDbSet(p => p.Employees, employee);
             SetUpDbSet(p => p.Products, product);
@@ -75,6 +85,9 @@ namespace CleanArchitecture.Application.Sales.Commands.CreateSale
             _mocker.GetMock<ISaleFactory>()
                 .Setup(p => p.Create(
                     Date,
+                    //indsather
+                    Delivery,
+                    //------------
                     customer,
                     employee,
                     product,

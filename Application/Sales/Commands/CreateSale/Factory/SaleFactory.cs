@@ -10,11 +10,13 @@ namespace CleanArchitecture.Application.Sales.Commands.CreateSale.Factory
 {
     public class SaleFactory : ISaleFactory
     {
-        public Sale Create(DateTime date, Customer customer, Employee employee, Product product, int quantity)
+        public Sale Create(DateTime date, DateTime delevery, Customer customer, Employee employee, Product product, int quantity)
         {
             var sale = new Sale();
 
             sale.Date = date;
+
+            sale.Delevery = delevery;
 
             sale.Customer = customer;
 

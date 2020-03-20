@@ -18,6 +18,10 @@ namespace CleanArchitecture.Domain.Sales
 
         private const int Id = 1;
         private static readonly DateTime Date = new DateTime(2001, 2, 3);
+
+        //Ny indsat!
+        private static readonly DateTime Delevery = new DateTime(2001, 2, 3);
+
         private const decimal UnitPrice = 1.00m;
         private const int Quantity = 1;
 
@@ -49,6 +53,16 @@ namespace CleanArchitecture.Domain.Sales
 
             Assert.That(_sale.Date,
                 Is.EqualTo(Date));
+        }
+
+        //Ny Indsat!
+        [Test]
+        public void TestSetAndGetDelivery()
+        {
+            _sale.Delevery = Delevery;
+
+            Assert.That(_sale.Delevery,
+                Is.EqualTo(Delevery));
         }
 
         [Test]

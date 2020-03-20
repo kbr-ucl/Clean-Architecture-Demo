@@ -39,9 +39,12 @@ namespace CleanArchitecture.Application.Sales.Commands.CreateSale.Factory
         [Test]
         public void TestCreateShouldCreateSale()
         {
-            var result = _factory.Create(DateTime, _customer, _employee, _product, Quantity);
+            var result = _factory.Create(DateTime,DateTime, _customer, _employee, _product, Quantity);
 
             Assert.That(result.Date, Is.EqualTo(DateTime));
+            //indsatHer
+            Assert.That(result.Delevery, Is.EqualTo(DateTime));
+            //--------------------------------------
             Assert.That(result.Customer, Is.EqualTo(_customer));
             Assert.That(result.Employee, Is.EqualTo(_employee));
             Assert.That(result.Product, Is.EqualTo(_product));

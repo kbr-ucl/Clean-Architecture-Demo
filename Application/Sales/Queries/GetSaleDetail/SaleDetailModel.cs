@@ -10,6 +10,10 @@ namespace CleanArchitecture.Application.Sales.Queries.GetSaleDetail
 
         public DateTime Date { get; set; }
 
+        //indsather
+        public DateTime Delivery { get; set; }
+        //--------------------------------------
+
         public string CustomerName { get; set; }
 
         public string EmployeeName { get; set; }

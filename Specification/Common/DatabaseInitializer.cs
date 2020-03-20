@@ -133,6 +133,8 @@ namespace CleanArchitecture.Specification.Common
 
             var date = new DateTime(2001, 2, 3);
 
+            var delivery = new DateTime(2001, 2, 3);
+
             var customer = _mockDatabase.Object.Customers
                 .Single(p => p.Id == customerId);
 
@@ -146,6 +148,7 @@ namespace CleanArchitecture.Specification.Common
             {
                 Id = id,
                 Date = date.AddDays(dateOffset),
+                Delevery = delivery.AddDays(dateOffset),
                 Customer = customer,
                 Employee = employee,
                 Product = product,

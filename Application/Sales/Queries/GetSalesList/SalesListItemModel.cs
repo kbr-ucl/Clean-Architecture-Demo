@@ -8,6 +8,8 @@ namespace CleanArchitecture.Application.Sales.Queries.GetSalesList
 
         public DateTime Date { get; set; }
 
+        public DateTime Delivery { get; set; }
+
         public string CustomerName { get; set; }
 
         public string EmployeeName { get; set; }

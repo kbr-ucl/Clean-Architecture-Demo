@@ -22,6 +22,9 @@ namespace CleanArchitecture.Application.Sales.Queries.GetSalesList
 
         private const int SaleId = 1;
         private static readonly DateTime Date = new DateTime(2001, 2, 3);
+        //indsather
+        private static readonly DateTime Delivery = new DateTime(2001, 2, 3);
+        //-----------------------------------------------------------------------
         private const string CustomerName = "Customer 1";
         private const string EmployeeName = "Employee 1";
         private const string ProductName = "Product 1";
@@ -51,6 +54,9 @@ namespace CleanArchitecture.Application.Sales.Queries.GetSalesList
             {
                 Id = SaleId,
                 Date = Date,
+                //indsatHer
+                Delevery = Delivery,
+                //-----------------------------
                 Customer = customer,
                 Employee = employee,
                 Product = product,

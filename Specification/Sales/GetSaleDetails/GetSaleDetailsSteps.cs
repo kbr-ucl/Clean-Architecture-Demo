@@ -40,6 +40,10 @@ namespace CleanArchitecture.Specification.Sales.GetSaleDetails
             Assert.That(_result.Date,
                 Is.EqualTo(model.Date));
 
+            //indsatHer
+            Assert.That(_result.Delivery, Is.EqualTo(model.Delivery));
+            //-----------
+
             Assert.That(_result.CustomerName,
                 Is.EqualTo(model.Customer));
 

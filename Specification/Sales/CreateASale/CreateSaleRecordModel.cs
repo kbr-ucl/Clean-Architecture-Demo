@@ -8,6 +8,8 @@ namespace CleanArchitecture.Specification.Sales.CreateASale
     {
         public DateTime Date { get; set; }
 
+        public DateTime Delivery { get; set; }
+
         public string Customer { get; set; }
 
         public string Employee { get; set; }

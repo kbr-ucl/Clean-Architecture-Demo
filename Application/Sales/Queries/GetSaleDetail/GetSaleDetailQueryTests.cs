@@ -22,6 +22,9 @@ namespace CleanArchitecture.Application.Sales.Queries.GetSaleDetail
 
         private const int SaleId = 1;
         private static readonly DateTime Date = new DateTime(2001, 2, 3);
+        //InsatHer
+        private static readonly DateTime Delivery = new DateTime(2001, 2, 3);
+        //-----------------------------------------------------------------------
         private const string CustomerName = "Customer 1";
         private const string EmployeeName = "Employee 1";
         private const string ProductName = "Product 1";
@@ -51,6 +54,9 @@ namespace CleanArchitecture.Application.Sales.Queries.GetSaleDetail
             {
                 Id = SaleId,
                 Date = Date,
+                //indsather
+                Delevery = Delivery,
+                //---------------------
                 Customer = customer,
                 Employee = employee,
                 Product = product,
@@ -80,6 +86,10 @@ namespace CleanArchitecture.Application.Sales.Queries.GetSaleDetail
 
             Assert.That(result.Date, 
                 Is.EqualTo(Date));
+
+            //IndsatHer
+            Assert.That(result.Delivery, Is.EqualTo(Delivery));
+            //...........................
 
             Assert.That(result.CustomerName, 
                 Is.EqualTo(CustomerName));
